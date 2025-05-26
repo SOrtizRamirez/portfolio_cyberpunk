@@ -1,14 +1,12 @@
 *{
-    padding: 0;
-    margin: 0;
-    cursor: url("/img/cursor.png") 0 0, pointer;
+    cursor: url("./img/cursor.png") 0 0, pointer;
     box-sizing: border-box;
     text-decoration: none;
     border: none;
     outline: none;
     font-family: "orbitron", sans-serif;
-    color: #f0f; /* fucsia */
-    text-shadow: 0 0 5px #f0f, 0 0 10px #f0f, 0 0 20px #f0f;
+    color: rgb(255, 255, 255); 
+    text-shadow: 0 0 5px rgb(30, 255, 0), 0 0 10px rgba(55, 255, 0, 0.411), 0 0 20px rgba(72, 255, 0, 0.236);
 }
 
 html{
@@ -20,11 +18,10 @@ html{
     --bg-color:#f8f7f7;
     --second-bg-color: #fafafa;
     --text-color: white;
-    --main-color: #00f2ff;
+    --main-color: #51ff00;
 }
 
 body {
-  font-family: 'Orbitron';
   background-color: #000000;
   backdrop-filter: blur(10px);
   background-repeat: repeat;
@@ -46,13 +43,6 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-}
-
-#menu-icon{
-    font-size: 3.6rem;
-    color: var(--main-color);
-    display: none;
-    font-weight: 800;
 }
 
 .logo{
@@ -95,33 +85,30 @@ span, spon{
 }
 
 section {
-  position: relative;
-  overflow: hidden;
-  border-radius: 40px;
-  max-width: 90vw;
-  margin: 5rem auto;
-  padding: 10rem 12%;
-  display: flex;
-  min-height: 90vh;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.3); /* para mejorar el contraste */
-  box-shadow: 0 0 20px #fc02e3, 0 0 40px #ee00ff;
-  backdrop-filter: blur(5px); /* suave desenfoque al interior */
+    width: 70%;
+    height: 70%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 40px;
+    max-width: 90vw;
+    margin: 5rem auto;
+    min-height: 90vh;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 0 20px #5eff0080, 0 0 40px #74ff17;
+    backdrop-filter: blur(5px); 
 }
 
-/* FONDO GIF como capa independiente con desenfoque y desvanecido */
- section::before {
+section::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: url(./flowers_background.gif) center/cover no-repeat;
+  background: url(/image/background.gif) center/cover no-repeat;
   filter: blur(8px);
   opacity: 0.6;
   z-index: -1;
-  mask-image: radial-gradient(circle at center, black 65%, transparent 100%);
-  -webkit-mask-image: radial-gradient(circle at center, black 65%, transparent 100%);
-} 
+}
 
 
 .home{
@@ -137,14 +124,11 @@ section {
 }
 
 .presentation {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  
     padding: 15rem 10% 5rem 10%;
-    gap: 5rem;
 }
 .home-content h1{
+
     font-size: 4rem;
     font-weight: 550px;
     margin-top: 1.5rem;
@@ -156,18 +140,9 @@ section {
     margin: 1rem 0;
 }
 
-.home-content p{ 
-    color:#ffffff;
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.8;
-    text-align: justify;
-    margin-left: 200px;
-    
-}
-
 .home-img img{
-    margin-top: 100px;
+    align-content: center;
+    margin-bottom: auto;
     width: 20vw;
     border-radius: 15%;
     box-shadow: 0 0 25px var(--main-color);
@@ -182,33 +157,8 @@ section {
     box-shadow: 0 0 50px var(--main-color);
     box-shadow: 0 0 100px var(--main-color);
 }
-.social-icons a{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    padding: 1rem;
-    background: transparent;
-    border: 2px solid var(--main-color);
-    border-radius: 50%;
-    margin: 3rem 0.5rem;
-    transition: 0.3s;
-}
 
-.social-icons a:hover{
-    color: var(--text-color);
-    background-color: var(--main-color);
-    transform: scale(1.2)translateY(-5px);
-    box-shadow: 0 0 25px var(--main-color);
-}
-.list-topics li::marker{
-    color: #ff00d0;
-}
 
-.list-topics li{
-    text-align: justify;
-    font-size: 15px;
-}
 .footer {
     background-color: #000000;
     color: var(--text-color);
@@ -257,10 +207,43 @@ section {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #fe01e0; 
+    background: #01bbfe; 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #ff00f2; 
+    background: #00f2ff; 
+}
+.info-table {
+    padding: 2rem 10%;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 5px;
+    background: linear-gradient(90deg, #000 0%, rgba(9, 255, 0, 0.545) 50%, #000 100%);
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--main-color);
+    border-right: 1px solid var(--main-color);
+}
+
+th:last-child, td:last-child {
+    border-right: none;
+}
+
+th {
+    background: #111;
+    font-size: 1.6rem;
 }
