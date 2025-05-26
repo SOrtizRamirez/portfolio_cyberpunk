@@ -1,0 +1,243 @@
+* {
+    padding: 0;
+    margin: 0;
+    cursor: url("./img/cursor.png") 0 0, pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "orbitron", sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgb(0, 195, 255), 0 0 10px rgb(0, 221, 255), 0 0 20px rgb(0, 204, 255);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #000000;
+    --text-color: white;
+    --main-color: #00f7ff;
+}
+
+body {
+     font-family: 'Orbitron';
+    background-color: #000000;
+    backdrop-filter: blur(10px);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: scroll;
+}
+
+header{
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 4rem 12%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+    font-weight: 800;
+}
+
+.logo{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    transform: scale(1.1);
+    cursor: url("./img/cursor.png") 0 0, pointer;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+
+.highlight {
+    color: var(--main-color);
+}
+
+.navbar a {
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+.presentation {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15rem 10% 5rem 10%;
+    gap: 5rem;
+}
+
+.home-img img{
+    padding: 0.5rem;
+    width: 20vw;
+    border-radius: 50%;
+    box-shadow: 0 25px 25px var(--main-color);
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    -o-transition: 0.4s ease-in-out;
+}
+
+.home-img img:hover {
+    box-shadow: 0 0 50px var(--main-color);
+}
+
+.home-img h1 {
+    padding: 0.5rem;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.home-img h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.home-content {
+    max-width: 600px;
+    text-align: right;
+}
+
+.home-content h1 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+}
+
+.home-content h3 {
+    font-size: 3.5rem;
+    margin: 1rem 0;
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+    text-align: justify;
+    margin-left: 200px;
+}
+
+.info-table {
+    padding: 2rem 10%;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 5px;
+    background: linear-gradient(90deg, #000 0%, rgba(251, 0, 255, 0.574) 50%, #000 100%);
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--main-color);
+    border-right: 1px solid var(--main-color);
+}
+
+th:last-child, td:last-child {
+    border-right: none;
+}
+
+th {
+    background: #111;
+    font-size: 1.6rem;
+}
+
+.footer {
+    background-color: #111;
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 5rem;
+    border-top: 1px solid var(--main-color);
+}
+
+.footer a {
+    color: var(--main-color);
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.footer-icons i {
+    font-size: 2.5rem;
+    margin: 1rem;
+    color: var(--main-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-icons i:hover {
+    transform: scale(1.2);
+    color: white;
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #7bfe01; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #48ff00; 
+}
+caption{
+    font-size: 4rem;
+}
