@@ -110,7 +110,7 @@ section {
 }
 
 /* FONDO GIF como capa independiente con desenfoque y desvanecido */
-section::before {
+/* section::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
@@ -121,7 +121,7 @@ section::before {
   z-index: -1;
   mask-image: radial-gradient(circle at center, black 65%, transparent 100%);
   -webkit-mask-image: radial-gradient(circle at center, black 65%, transparent 100%);
-}
+} */
 
 
 .home{
