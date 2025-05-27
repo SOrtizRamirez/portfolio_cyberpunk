@@ -1,3 +1,4 @@
+/* We put style to all the content */
 *{
     padding: 0;
     margin: 0;
@@ -6,9 +7,9 @@
     text-decoration: none;
     border: none;
     outline: none;
-    font-family: "orbitron", sans-serif;
+    font-family: "orbitron";
     color: #f0f; /* fucsia */
-    text-shadow: 0 0 5px #f0f, 0 0 10px #f0f, 0 0 20px #f0f;
+    text-shadow: 0 0 5px rgb(238, 226, 238), 0 0 10px #f0f, 0 0 20px rgb(241, 128, 241);
 }
 
 html{
@@ -16,13 +17,15 @@ html{
     overflow-x: hidden;
 }
 
+/* We declare the colors for, subsequently, use them on vars. It has to be on root because it'll be use on all the root */
 :root{
-    --bg-color:#f8f7f7;
+    --bg-color:#000000;
     --second-bg-color: #fafafa;
     --text-color: white;
     --main-color: #00f2ff;
 }
 
+/* We delcare the body's style */
 body {
   font-family: 'Orbitron';
   background-color: #000000;
@@ -34,8 +37,9 @@ body {
   background-attachment: scroll;
 }
 
-
+/* We delcare the header style */
 .header{
+    position: sticky;
     width: 100%;
     top: 0;
     left: 0;
@@ -48,13 +52,7 @@ body {
     z-index: 100;
 }
 
-#menu-icon{
-    font-size: 3.6rem;
-    color: var(--main-color);
-    display: none;
-    font-weight: 800;
-}
-
+/* We delcare logo's style */
 .logo{
     font-size: 3.6rem;
     color: var(--text-color);
@@ -65,17 +63,13 @@ body {
     -ms-transition: 0.3s ease;
     -o-transition: 0.3s ease;
 }
-.logo:hover{
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-}
+
+/* We change the color of the letters that have span/spon */
 span, spon{
     color: var(--main-color);
 }
 
+/* We selected every "a" from navbar to upload the style */
 .navbar a{
     font-size: 1.8rem;
     color: var(--text-color);
@@ -88,11 +82,14 @@ span, spon{
     -ms-transition: 0.3s ease;
     -o-transition: 0.3s ease;
 }
+
+/* We selected the navbar hover */
 .navbar a:hover{
     border-bottom: 3px solid var(--main-color);
     color: var(--main-color)
 }
 
+/* We added the section's style */
 section {
   position: relative;
   overflow: hidden;
@@ -108,7 +105,7 @@ section {
   backdrop-filter: blur(5px); /* suave desenfoque al interior */
 }
 
-/* FONDO GIF como capa independiente con desenfoque y desvanecido */
+/* GIF background as a separate layer with blur and fade */
  section::before {
   content: "";
   position: absolute;
@@ -122,7 +119,7 @@ section {
   -webkit-mask-image: radial-gradient(circle at center, black 65%, transparent 100%);
 } 
 
-
+/* We selected home's style on every paragraph */
 .home{
     display: flex;
     align-items: center;
@@ -135,14 +132,6 @@ section {
     text-align: right;
 }
 
-.presentation {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 15rem 10% 5rem 10%;
-    gap: 5rem;
-}
 .home-content h1{
     font-size: 4rem;
     font-weight: 550px;
@@ -181,6 +170,8 @@ section {
     box-shadow: 0 0 50px var(--main-color);
     box-shadow: 0 0 100px var(--main-color);
 }
+
+/* We put social-icon's style with hover */
 .social-icons a{
     display: inline-flex;
     justify-content: center;
@@ -194,20 +185,15 @@ section {
     transition: 0.3s;
 }
 
+/* social icon's hover */
 .social-icons a:hover{
     color: var(--text-color);
     background-color: var(--main-color);
     transform: scale(1.2)translateY(-5px);
     box-shadow: 0 0 25px var(--main-color);
 }
-.list-topics li::marker{
-    color: #ff00d0;
-}
 
-.list-topics li{
-    text-align: justify;
-    font-size: 15px;
-}
+/* Footer's style */
 .footer {
     background-color: #000000;
     color: var(--text-color);
@@ -222,10 +208,6 @@ section {
     color: var(--main-color);
     margin: 0 1rem;
     transition: color 0.3s ease;
-}
-
-.footer a:hover {
-    color: white;
 }
 
 .footer-icons i {
@@ -245,21 +227,4 @@ section {
     margin-top: 1rem;
     font-size: 1.5rem;
 }
-::-webkit-scrollbar {
-    width: 10px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #fe01e0; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #ff00f2; 
-}

@@ -1,9 +1,11 @@
+/* Defined the vars of root */
 :root {
     --bg-color: #000000;
     --text-color: white;
     --main-color: #ff00d0;
 }
 
+/* Define the all page's style */
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +18,7 @@
     text-shadow: 0 0 5px #f0f, 0 0 10px #f0f, 0 0 20px #f0f;
 }
 
+/* Body's style */
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -33,6 +36,7 @@ spon {
     color: var(--main-color);
 }
 
+/* form style */
 form {
     padding: 2rem;
     max-width: 500px;
@@ -42,6 +46,7 @@ form {
     gap: 1.2rem;
 }
 
+/* Text area's style */
 input,
 textarea {
     width: 100%;
@@ -54,12 +59,14 @@ textarea {
     resize: none;
 }
 
+/* Input's style */
 input:focus,
 textarea:focus {
     outline: none;
     border-color: white;
 }
 
+/* Button's style */
 button {
     background: var(--main-color);
     color: #fff;
@@ -96,13 +103,6 @@ footer {
     z-index: 100;
 }
 
-#menu-icon{
-    font-size: 1rem;
-    color: var(--main-color);
-    display: none;
-    font-weight: 800;
-}
-
 .logo{
     font-size: 2.6rem;
     color: var(--text-color);
@@ -114,6 +114,7 @@ footer {
     -ms-transition: 0.3s ease;
     -o-transition: 0.3s ease;
 }
+
 .logo:hover{
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
@@ -126,6 +127,7 @@ span, spon {
     color: var(--main-color);
 }
 
+/* Navbar style */
 .navbar a {
     font-size: 1.2rem;
     color: var(--text-color);
@@ -140,21 +142,3 @@ span, spon {
     color: var(--main-color);
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #f601fe; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #ff00ee; 
-}

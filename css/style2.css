@@ -1,3 +1,4 @@
+/* We put style to all the content */
 * {
     padding: 0;
     margin: 0;
@@ -6,7 +7,7 @@
     text-decoration: none;
     border: none;
     outline: none;
-    font-family: "orbitron", sans-serif;
+    font-family: "orbitron";
     color: rgb(255, 255, 255);
     text-shadow: 0 0 5px rgb(0, 195, 255), 0 0 10px rgb(0, 221, 255), 0 0 20px rgb(0, 204, 255);
 }
@@ -17,15 +18,16 @@ html {
     scroll-behavior: smooth;
 }
 
+/* We declare the colors for, subsequently, use them on vars. It has to be on root because it'll be use on all the root */
 :root {
     --bg-color: #000000;
     --text-color: white;
     --main-color: #00f7ff;
 }
 
+/* We delcare the body's style */
 body {
-     font-family: 'Orbitron';
-    background-color: #000000;
+    background-color: var(--bg-color);
     backdrop-filter: blur(10px);
     background-repeat: repeat;
     background-size: cover;
@@ -34,6 +36,7 @@ body {
     background-attachment: scroll;
 }
 
+/* We delcare the header's style and nav's style */
 header{
     width: 100%;
     top: 0;
@@ -45,36 +48,6 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-}
-
-#menu-icon{
-    font-size: 3.6rem;
-    color: var(--main-color);
-    display: none;
-    font-weight: 800;
-}
-
-.logo{
-    font-size: 3.6rem;
-    color: var(--text-color);
-    transform: scale(1.1);
-    transition: 0.3s ease;
-    -webkit-transition: 0.3s ease;
-    -moz-transition: 0.3s ease;
-    -ms-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-}
-.logo:hover{
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-}
-
-
-.highlight {
-    color: var(--main-color);
 }
 
 .navbar a {
@@ -90,6 +63,20 @@ header{
     border-bottom: 2px solid var(--main-color);
 }
 
+/* We put logo's style  */
+.logo{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    transform: scale(1.1);
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+
+
+/* We selected presentation's on every paragraph */
 .presentation {
     
     display: flex;
@@ -99,6 +86,11 @@ header{
     gap: 5rem;
 }
 
+/* We selected home's style on every paragraph */
+.home-content {
+    max-width: 600px;
+    text-align: right;
+}
 .home-img img{
     padding: 0.5rem;
     width: 20vw;
@@ -126,10 +118,7 @@ header{
     margin-top: 1rem;
 }
 
-.home-content {
-    max-width: 600px;
-    text-align: right;
-}
+
 
 .home-content h1 {
     font-size: 6rem;
@@ -155,6 +144,7 @@ header{
     justify-content: center;
 }
 
+/* Table's style */
 table {
     width: 100%;
     max-width: 1100px;
@@ -163,12 +153,14 @@ table {
     border-spacing: 5px;
     background: linear-gradient(90deg, #000 0%, rgba(251, 0, 255, 0.574) 50%, #000 100%);
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     border-radius: 10px;
     overflow: hidden;
+   
 }
 
 th, td {
+    text-shadow: none;
     padding: 1rem;
     border-bottom: 1px solid var(--main-color);
     border-right: 1px solid var(--main-color);
@@ -180,9 +172,10 @@ th:last-child, td:last-child {
 
 th {
     background: #111;
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 
+/* Footer's style */
 .footer {
     background-color: #111;
     color: var(--text-color);
@@ -219,24 +212,7 @@ th {
     margin-top: 1rem;
     font-size: 1.5rem;
 }
-::-webkit-scrollbar {
-    width: 10px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #7bfe01; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #48ff00; 
-}
-caption{
-    font-size: 4rem;
+spon, span {
+    color: var(--main-color);
 }

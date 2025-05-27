@@ -1,10 +1,11 @@
+/* We put style to all the content */
 *{
     cursor: url("/image/cursor.png") 0 0, pointer;
     box-sizing: border-box;
     text-decoration: none;
     border: none;
     outline: none;
-    font-family: "orbitron", sans-serif;
+    font-family: "orbitron";
     color: rgb(255, 255, 255); 
     text-shadow: 0 0 5px rgb(30, 255, 0), 0 0 10px rgba(55, 255, 0, 0.411), 0 0 20px rgba(72, 255, 0, 0.236);
 }
@@ -14,6 +15,7 @@ html{
     overflow-x: hidden;
 }
 
+/* We declare the colors for, subsequently, use them on vars. It has to be on root because it'll be use on all the root */
 :root{
     --bg-color:#f8f7f7;
     --second-bg-color: #fafafa;
@@ -21,6 +23,7 @@ html{
     --main-color: #51ff00;
 }
 
+/* We delcare the body's style */
 body {
   background-color: #000000;
   backdrop-filter: blur(10px);
@@ -31,7 +34,7 @@ body {
   background-attachment: scroll;
 }
 
-
+/* Header style's */
 .header{
     width: 100%;
     top: 0;
@@ -62,10 +65,13 @@ body {
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
 }
+
+/* Spon/span's style */
 span, spon{
     color: var(--main-color);
 }
 
+/* Navbar's style */
 .navbar a{
     font-size: 1.8rem;
     color: var(--text-color);
@@ -83,6 +89,7 @@ span, spon{
     color: var(--main-color)
 }
 
+/* Section's style */
 section {
     width: 70%;
     height: 70%;
@@ -109,19 +116,7 @@ section::before {
   z-index: -1;
 }
 
-
-.home{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15rem;
-}
-.home-content{
-    color:#ffffff;
-    padding-top: 10rem;
-    text-align: right;
-}
-
+/* Presentation's style and home's style */
 .presentation {
   
     padding: 15rem 10% 5rem 10%;
@@ -132,11 +127,6 @@ section::before {
     font-weight: 550px;
     margin-top: 1.5rem;
     line-height: 1;
-}
-
-.home-content h4{
-    font-size: 5rem;
-    margin: 1rem 0;
 }
 
 .home-img img{
@@ -157,7 +147,7 @@ section::before {
     box-shadow: 0 0 100px var(--main-color);
 }
 
-
+/* Footer's style */
 .footer {
     background-color: #000000;
     color: var(--text-color);
@@ -195,24 +185,8 @@ section::before {
     margin-top: 1rem;
     font-size: 1.5rem;
 }
-::-webkit-scrollbar {
-    width: 10px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #01bbfe; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #00f2ff; 
-}
+/* Table's style */
 .info-table {
     padding: 2rem 10%;
     display: flex;
