@@ -51,17 +51,31 @@ header{
     position:sticky
 }
 
+/* Nav order and style */
 .navbar a {
-    margin-left: 2rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--text-color);
-    transition: 0.3s;
-    border-bottom: 2px solid transparent;
+    margin-left: 5rem;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
 }
 
 .navbar a:hover {
     color: var(--main-color);
     border-bottom: 2px solid var(--main-color);
+}
+
+.header .navbar ul{
+    list-style: none;
+}
+
+.header .navbar li{
+    display: inline-block
 }
 
 /* We put logo's style  */

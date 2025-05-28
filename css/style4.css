@@ -32,10 +32,6 @@ h1 {
     margin-bottom: 2rem;
 }
 
-spon {
-    color: var(--main-color);
-}
-
 /* form style */
 form {
     padding: 2rem;
@@ -104,6 +100,22 @@ footer {
     position:sticky
 }
 
+.logo:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+/* Nav order and style */
+.header .navbar ul{
+    list-style: none;
+}
+
+.header .navbar li{
+    display: inline-block
+}
 .logo{
     font-size: 2.6rem;
     color: var(--text-color);
@@ -114,14 +126,6 @@ footer {
     -moz-transition: 0.3s ease;
     -ms-transition: 0.3s ease;
     -o-transition: 0.3s ease;
-}
-
-.logo:hover{
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
 }
 
 span, spon {
